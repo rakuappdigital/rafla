@@ -94,10 +94,10 @@ export default function Sidebar({ lists, activeListId, onSelectList, onListsChan
           }`}
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/>
-            <line x1="10" y1="12" x2="14" y2="12"/>
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
+            <polyline points="9 11 12 14 16 10"/>
           </svg>
-          Arşiv
+          Satın Alma Geçmişi
         </button>
       </div>
     </aside>

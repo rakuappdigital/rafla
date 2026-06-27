@@ -58,12 +58,11 @@ export default function ItemCard({ item, onUpdate, onEdit }: Props) {
             </button>
             <button
               onClick={handleArchive}
-              className="p-1 rounded-lg hover:bg-stone-100 text-stone-400 hover:text-stone-600"
-              title="Arşivle"
+              className="p-1 rounded-lg hover:bg-green-50 text-stone-400 hover:text-green-600"
+              title="Satın Alındı"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/>
-                <line x1="10" y1="12" x2="14" y2="12"/>
+                <polyline points="20 6 9 17 4 12"/>
               </svg>
             </button>
             <button

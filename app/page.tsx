@@ -73,7 +73,7 @@ export default function Home() {
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-xl font-bold text-stone-800">
               {showArchive
-                ? "Arşiv"
+                ? "Satın Alma Geçmişi"
                 : activeList
                 ? `${activeList.emoji} ${activeList.name}`
                 : "Rafla"}
@@ -142,7 +142,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center py-20 text-stone-300">
               <span className="text-5xl mb-3">🛍️</span>
               <p className="text-sm">
-                {showArchive ? "Arşiv boş" : "Henüz ürün yok — Ekle butonuna bas!"}
+                {showArchive ? "Henüz satın alınan ürün yok" : "Henüz ürün yok — Ekle butonuna bas!"}
               </p>
             </div>
           ) : view === "list" ? (
@@ -179,11 +179,11 @@ export default function Home() {
                       </button>
                       <button
                         onClick={() => { archiveItem(item.id); refresh(); }}
-                        className="p-1.5 rounded-lg bg-white/90 text-stone-500 hover:text-stone-700 shadow-sm"
+                        className="p-1.5 rounded-lg bg-white/90 text-stone-500 hover:text-green-600 shadow-sm"
+                        title="Satın Alındı"
                       >
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <polyline points="21 8 21 21 3 21 3 8" /><rect x="1" y="3" width="22" height="5" />
-                          <line x1="10" y1="12" x2="14" y2="12" />
+                          <polyline points="20 6 9 17 4 12"/>
                         </svg>
                       </button>
                       <button
