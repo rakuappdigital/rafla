@@ -41,6 +41,7 @@ export default function AddItemModal({ lists, activeListId, editItem, onClose, o
       if (data.image) setImage(data.image);
       if (data.price) setPrice(data.price);
       if (data.siteName) setSiteName(data.siteName);
+      if (data.description && !note) setNote(data.description);
     } finally {
       setFetching(false);
     }
