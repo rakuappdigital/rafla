@@ -116,9 +116,11 @@ export default function AddItemModal({ lists, activeListId, editItem, onClose, o
             {/* Önizleme */}
             {(image || title) && (
               <div className="flex gap-3 p-3 bg-stone-50 rounded-xl">
-                {image && (
+                {image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={image} alt="" className="w-14 h-14 rounded-lg object-cover flex-shrink-0" />
+                ) : (
+                  <div className="w-14 h-14 rounded-lg bg-stone-200 flex items-center justify-center flex-shrink-0 text-xl">🛍️</div>
                 )}
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-stone-700 line-clamp-2">{title}</p>
@@ -135,6 +137,23 @@ export default function AddItemModal({ lists, activeListId, editItem, onClose, o
               onChange={(e) => setTitle(e.target.value)}
               className="w-full text-sm border border-stone-200 rounded-xl px-3 py-2.5 outline-none focus:border-stone-400 bg-stone-50"
             />
+
+            {/* Görsel URL — otomatik gelmezse manuel girilebilir */}
+            <div className="flex gap-2 items-center">
+              <input
+                type="url"
+                placeholder="Görsel URL (otomatik gelmediyse yapıştır)"
+                value={image}
+                onChange={(e) => setImage(e.target.value)}
+                className="flex-1 text-sm border border-stone-200 rounded-xl px-3 py-2.5 outline-none focus:border-stone-400 bg-stone-50"
+              />
+              {image && (
+                <button
+                  onClick={() => setImage("")}
+                  className="text-stone-400 hover:text-stone-600 text-lg leading-none"
+                >×</button>
+              )}
+            </div>
 
             {/* Fiyat */}
             <input
